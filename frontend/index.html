@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex - Pokémon Collector</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pokédex</h1>
+    <nav>
+      <a href="index.html" class="active">Pokédex</a>
+      <a href="collection.html">Collezione</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Cerca per nome, tipo o numero..." />
+      <button id="btn-add" class="btn-add">+ Aggiungi</button>
+    </div>
+    <div id="pokemon-grid" class="pokemon-grid">
+      <div class="loading">Caricamento Pokémon...</div>
+    </div>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2>Aggiungi Pokémon</h2>
+      <form id="add-form">
+        <label>Nome <input type="text" id="field-nome" required /></label>
+        <label>Tipo <input type="text" id="field-tipo" required /></label>
+        <label>Numero Pokédex <input type="number" id="field-numero" required /></label>
+        <label>URL immagine <input type="url" id="field-img" /></label>
+        <div class="modal-actions">
+          <button type="button" id="btn-cancel" class="btn-release">Annulla</button>
+          <button type="submit" class="btn-catch">Salva</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/pokedex.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collezione - Pokémon Collector</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>La Mia Collezione</h1>
+    <nav>
+      <a href="index.html">Pokédex</a>
+      <a href="collection.html" class="active">Collezione</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Cerca nella tua collezione..." />
+    </div>
+    <div id="collection-grid" class="pokemon-grid">
+      <div class="loading">Caricamento collezione...</div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/collection.js"></script>
+</body>
+</html>
